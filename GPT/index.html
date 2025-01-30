@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo de Tarot</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #1a1a1a;
+            color: white;
+        }
+        .container {
+            margin-top: 50px;
+        }
+        .card {
+            width: 200px;
+            height: 320px;
+            background-color: white;
+            color: black;
+            border-radius: 10px;
+            margin: auto;
+            padding: 20px;
+            box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);
+        }
+        .card img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            background-color: gold;
+            color: black;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: darkgoldenrod;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Jogo de Tarot</h1>
+        <div class="card" id="card">
+            <img id="cardImage" src="" alt="Carta de Tarot">
+            <h2 id="cardName">Clique para sortear uma carta</h2>
+            <p id="cardMeaning"></p>
+        </div>
+        <button onclick="drawCard()">Sortear Carta</button>
+    </div>
+
+    <script>
+        const tarotCards = [
+            { name: "O Louco", image: "https://upload.wikimedia.org/wikipedia/commons/9/90/RWS_Tarot_00_Fool.jpg", meaning: "Novos começos, liberdade, espontaneidade." },
+            { name: "O Mago", image: "https://upload.wikimedia.org/wikipedia/commons/d/de/RWS_Tarot_01_Magician.jpg", meaning: "Poder, habilidade, manifestação." },
+            { name: "A Sacerdotisa", image: "https://upload.wikimedia.org/wikipedia/commons/8/88/RWS_Tarot_02_High_Priestess.jpg", meaning: "Intuição, mistério, conhecimento." },
+            { name: "A Imperatriz", image: "https://upload.wikimedia.org/wikipedia/commons/d/d2/RWS_Tarot_03_Empress.jpg", meaning: "Fertilidade, abundância, criatividade." },
+            { name: "O Imperador", image: "https://upload.wikimedia.org/wikipedia/commons/c/c3/RWS_Tarot_04_Emperor.jpg", meaning: "Autoridade, estrutura, estabilidade." },
+            { name: "O Papa", image: "https://upload.wikimedia.org/wikipedia/commons/8/8d/RWS_Tarot_05_Hierophant.jpg", meaning: "Tradição, conhecimento, orientação." },
+            { name: "Os Amantes", image: "https://upload.wikimedia.org/wikipedia/commons/3/3a/RWS_Tarot_06_Lovers.jpg", meaning: "Amor, harmonia, escolhas." },
+            { name: "O Carro", image: "https://upload.wikimedia.org/wikipedia/commons/0/0b/RWS_Tarot_07_Chariot.jpg", meaning: "Determinação, controle, vitória." }
+            // Adicione os outros Arcanos Maiores aqui...
+        ];
+
+        function drawCard() {
+            const randomIndex = Math.floor(Math.random() * tarotCards.length);
+            const selectedCard = tarotCards[randomIndex];
+            
+            document.getElementById("cardImage").src = selectedCard.image;
+            document.getElementById("cardName").innerText = selectedCard.name;
+            document.getElementById("cardMeaning").innerText = selectedCard.meaning;
+        }
+    </script>
+</body>
+</html>

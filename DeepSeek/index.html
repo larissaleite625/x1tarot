@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jogo de Tarot</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Jogo de Tarot</h1>
+    <button id="draw-card">Sortear Carta</button>
+    <div id="shuffle-animation" class="hidden">Embaralhando...</div>
+    <div id="card-display" class="hidden">
+      <img id="card-image" src="" alt="Carta de Tarot">
+      <h2 id="card-name"></h2>
+      <p id="card-meaning"></p>
+    </div>
+    <div id="history">
+      <h2>Histórico de Cartas</h2>
+      <ul id="history-list"></ul>
+    </div>
+    <button id="toggle-dark-mode">Modo Escuro</button>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

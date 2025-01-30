@@ -1,0 +1,3 @@
+Crie um jogo de Tarot simples usando HTML, CSS e JavaScript, onde o usuário pode sortear uma carta aleatória dos 22 Arcanos Maiores. O jogo deve exibir a imagem da carta, seu nome e um breve significado.
+
+Deve conter um botão para sortear uma nova carta e uma animação simples ao embaralhar. O design deve ser intuitivo e bonito. Opcionalmente, pode ter um modo escuro e um histórico das cartas já sorteadas.

@@ -1,0 +1,89 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  body.dark-mode {
+    background-color: #333;
+    color: #f4f4f4;
+  }
+  
+  .container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
+  }
+  
+  body.dark-mode .container {
+    background-color: #444;
+  }
+  
+  h1 {
+    margin-bottom: 20px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    transition: background-color 0.3s;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  #shuffle-animation {
+    font-size: 20px;
+    margin: 20px 0;
+    opacity: 0;
+    transition: opacity 0.5s;
+  }
+  
+  #shuffle-animation.visible {
+    opacity: 1;
+  }
+  
+  #card-display {
+    margin-top: 20px;
+  }
+  
+  #card-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+  
+  #card-name {
+    margin: 10px 0;
+  }
+  
+  #card-meaning {
+    font-style: italic;
+  }
+  
+  #history {
+    margin-top: 30px;
+  }
+  
+  #history-list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  #history-list li {
+    margin: 5px 0;
+  }
